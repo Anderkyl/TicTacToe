@@ -56,17 +56,15 @@ let createTable = function(){
     table.appendChild(row1);
     table.appendChild(row2);
     table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
-    table.appendChild(row3);
+    table.appendChild(row4);
+    table.appendChild(row5);
+    table.appendChild(row6);
+    table.appendChild(row7);
+    table.appendChild(row8);
+    table.appendChild(row9);
+    table.appendChild(row10);
+    table.appendChild(row11);
+    table.appendChild(row12);
 
 
 
