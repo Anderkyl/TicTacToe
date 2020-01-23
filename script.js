@@ -49,3 +49,15 @@ let createTable = function() {
 
 
 };
+
+let addClass = function(id){
+    id.classList.add("data1");
+    id.classList.add("data2");
+    id.classList.add("data3");
+    id.classList.add("data4");
+    id.classList.add("data5");
+    id.classList.add("data6");
+    id.classList.add("data7");
+    id.classList.add("data8");
+    id.classList.add("data9");
+}
