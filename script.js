@@ -61,3 +61,7 @@ let addClass = function(id){
     id.classList.add("data8");
     id.classList.add("data9");
 }
+
+let mouseover = function(id){
+    id.innerText = "X";
+}
