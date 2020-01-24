@@ -2,11 +2,13 @@ let createTable = function() {
     let table = document.createElement("table");
 
     let row1 = document.createElement("TR");
+
     let row2 = document.createElement("TR");
     let row3 = document.createElement("TR");
 
 
     let data1 = document.createElement("TD");
+    data1.onmouseover = function(){showHover(this)};
     let data2 = document.createElement("TD");
     let data3 = document.createElement("TD");
     let data4 = document.createElement("TD");
@@ -16,15 +18,15 @@ let createTable = function() {
     let data8 = document.createElement("TD");
     let data9 = document.createElement("TD");
 
-    data1.innerText = "X";
-    data2.innerText = "O";
-    data3.innerText = "X";
-    data4.innerText = "O";
-    data5.innerText = "X";
-    data6.innerText = "O";
-    data7.innerText = "X";
-    data8.innerText = "O";
-    data9.innerText = "X";
+    data1.innerText = "";
+    data2.innerText = "";
+    data3.innerText = "";
+    data4.innerText = "";
+    data5.innerText = "";
+    data6.innerText = "";
+    data7.innerText = "";
+    data8.innerText = "";
+    data9.innerText = "";
 
     row1.appendChild(data1);
     row1.appendChild(data2);
@@ -50,18 +52,15 @@ let createTable = function() {
 
 };
 
-let addClass = function(id){
-    id.classList.add("data1");
-    id.classList.add("data2");
-    id.classList.add("data3");
-    id.classList.add("data4");
-    id.classList.add("data5");
-    id.classList.add("data6");
-    id.classList.add("data7");
-    id.classList.add("data8");
-    id.classList.add("data9");
-}
 
-let mouseover = function(id){
+
+let showHover = function(id){
     id.innerText = "X";
+    id.style.backgroundColor = "white";
+};
+
+let hoverOut = function(id){
+    id.onmouseover = "";
+
+
 }
