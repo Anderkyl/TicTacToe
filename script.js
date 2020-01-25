@@ -10,13 +10,21 @@ let createTable = function() {
     let data1 = document.createElement("TD");
     data1.onmouseover = function(){showHover(this)};
     let data2 = document.createElement("TD");
+    data2.onmouseover = function(){showHover(this)};
     let data3 = document.createElement("TD");
+    data3.onmouseover = function(){showHover(this)};
     let data4 = document.createElement("TD");
+    data4.onmouseover = function(){showHover(this)};
     let data5 = document.createElement("TD");
+    data5.onmouseover = function(){showHover(this)};
     let data6 = document.createElement("TD");
+    data6.onmouseover = function(){showHover(this)};
     let data7 = document.createElement("TD");
+    data7.onmouseover = function(){showHover(this)};
     let data8 = document.createElement("TD");
+    data8.onmouseover = function(){showHover(this)};
     let data9 = document.createElement("TD");
+    data9.onmouseover = function(){showHover(this)};
 
     data1.innerText = "";
     data2.innerText = "";
@@ -56,11 +64,16 @@ let createTable = function() {
 
 let showHover = function(id){
     id.innerText = "X";
-    id.style.backgroundColor = "white";
+    id.style.backgroundColor = "purple";
 };
 
 let hoverOut = function(id){
-    id.onmouseover = "";
+    id.style.backgroundColor = "black";
+    if(id === document.getElementById("TD")){
+        id.innerText = "X";
+    }else if (id === document.getElementById("TD")){
+        id.innerText = "O";
+    }
 
 
 }
