@@ -6,37 +6,46 @@ let createTable = function() {
     let row1 = document.createElement("TR");
 
     let row2 = document.createElement("TR");
+
     let row3 = document.createElement("TR");
 
 
     let data1 = document.createElement("TD");
     data1.onmouseover = function(){showHover(this)};
     data1.onmouseout = function(){hoverOut(this)};
-    data1.onclick = toggle;
+    data1.onclick = function(){toggle(this)};
     let data2 = document.createElement("TD");
     data2.onmouseover = function(){showHover(this)};
     data2.onmouseout = function(){hoverOut(this)};
+    data2.onclick = function(){toggle(this)};
     let data3 = document.createElement("TD");
     data3.onmouseover = function(){showHover(this)};
     data3.onmouseout = function(){hoverOut(this)};
+    data3.onclick = function(){toggle(this)};
     let data4 = document.createElement("TD");
     data4.onmouseover = function(){showHover(this)};
     data4.onmouseout = function(){hoverOut(this)};
+    data4.onclick = function(){toggle(this)};
     let data5 = document.createElement("TD");
     data5.onmouseover = function(){showHover(this)};
     data5.onmouseout = function(){hoverOut(this)};
+    data5.onclick = function(){toggle(this)};
     let data6 = document.createElement("TD");
     data6.onmouseover = function(){showHover(this)};
     data6.onmouseout = function(){hoverOut(this)};
+    data6.onclick = function(){toggle(this)};
     let data7 = document.createElement("TD");
     data7.onmouseover = function(){showHover(this)};
     data7.onmouseout = function(){hoverOut(this)};
+    data7.onclick = function(){toggle(this)};
     let data8 = document.createElement("TD");
     data8.onmouseover = function(){showHover(this)};
     data8.onmouseout = function(){hoverOut(this)};
+    data8.onclick = function(){toggle(this)};
     let data9 = document.createElement("TD");
     data9.onmouseover = function(){showHover(this)};
     data9.onmouseout = function(){hoverOut(this)};
+    data9.onclick = function(){toggle(this)};
 
     data1.innerText = "";
     data2.innerText = "";
@@ -77,6 +86,7 @@ let createTable = function() {
 let showHover = function(id){
     id.innerText = "X";
     id.style.backgroundColor = "purple";
+
 };
 
 let hoverOut = function(id){
@@ -89,10 +99,15 @@ let hoverOut = function(id){
 let toggle =  function(id){
     if(toggleLet === true){
         id.innerText = "X";
+        id.style.backgroundColor = "purple";
+        id.onmouseout = "";
+        id.onmouseover = "";
         toggleLet = false;
     }else{
         id.innerText = "O";
+        id.onmouseout = "";
+        id.onmouseover = "";
         toggleLet = true;
-        id.backgroundColor = "white";
+        id.backgroundColor = "purple";
     }
 };
