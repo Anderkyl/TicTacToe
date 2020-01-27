@@ -1,3 +1,5 @@
+let toggleLet = true;
+
 let createTable = function() {
     let table = document.createElement("table");
 
@@ -9,22 +11,32 @@ let createTable = function() {
 
     let data1 = document.createElement("TD");
     data1.onmouseover = function(){showHover(this)};
+    data1.onmouseout = function(){hoverOut(this)};
+    data1.onclick = toggle;
     let data2 = document.createElement("TD");
     data2.onmouseover = function(){showHover(this)};
+    data2.onmouseout = function(){hoverOut(this)};
     let data3 = document.createElement("TD");
     data3.onmouseover = function(){showHover(this)};
+    data3.onmouseout = function(){hoverOut(this)};
     let data4 = document.createElement("TD");
     data4.onmouseover = function(){showHover(this)};
+    data4.onmouseout = function(){hoverOut(this)};
     let data5 = document.createElement("TD");
     data5.onmouseover = function(){showHover(this)};
+    data5.onmouseout = function(){hoverOut(this)};
     let data6 = document.createElement("TD");
     data6.onmouseover = function(){showHover(this)};
+    data6.onmouseout = function(){hoverOut(this)};
     let data7 = document.createElement("TD");
     data7.onmouseover = function(){showHover(this)};
+    data7.onmouseout = function(){hoverOut(this)};
     let data8 = document.createElement("TD");
     data8.onmouseover = function(){showHover(this)};
+    data8.onmouseout = function(){hoverOut(this)};
     let data9 = document.createElement("TD");
     data9.onmouseover = function(){showHover(this)};
+    data9.onmouseout = function(){hoverOut(this)};
 
     data1.innerText = "";
     data2.innerText = "";
@@ -69,11 +81,18 @@ let showHover = function(id){
 
 let hoverOut = function(id){
     id.style.backgroundColor = "black";
-    if(id === document.getElementById("TD")){
+    id.innerText = "";
+
+
+};
+
+let toggle =  function(id){
+    if(toggleLet === true){
         id.innerText = "X";
-    }else if (id === document.getElementById("TD")){
+        toggleLet = false;
+    }else{
         id.innerText = "O";
+        toggleLet = true;
+        id.backgroundColor = "white";
     }
-
-
-}
+};
